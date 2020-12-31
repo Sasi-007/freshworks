@@ -22,3 +22,19 @@ The data store will also support the following non-functional requirements.
 3. A client process is allowed to access the data store using multiple threads, if it desires to. The data store must therefore be thread-safe.
 
 4. The client will bear as little memory costs as possible to use this data store, while deriving maximum performance with respect to response times for accessing the data store.
+
+Solution(Working)
+-----------------
+```
+>>> import freshworks as fw
+>>> fw.create("sasi",25,120)
+>>> fw.read("sasi")
+'sasi:25'
+>>> fw.create("fresh",30,2)
+>>> fw.read("fresh")
+Expired
+>>> fw.delete("fresh")
+Expired
+>>> fw.delete("sasi")
+Deleted
+```
